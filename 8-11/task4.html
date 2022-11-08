@@ -8,34 +8,32 @@
 </head>
 <body>
     
-    <label style="display:inline ; margin-right: 60px;">Password</label>
-    <input type="password" onchange="lessthan6(this)" id="pass">
-    <p id="demo1" style="display:inline ; "></p>
-    <br>
+    <label style="display:inline ; margin-right:4%;">Password</label>
+    <input type="password" onchange="lessthan6(this)" id="p">
+    <p id="d1" style="display:inline ; "></p>
     <br>
     <label>Confirm Password</label>
-    <input type="password" onchange="confirm()" id="confirm">
-    <p id="demo2" style="display:inline ; "></p>
+    <input type="password" onchange="confirm()" id="c">
+    <p id="d2" style="display:inline ; "></p>
     <button style="display:none ; " id="button">Submit</button>
     <script>
         function lessthan6(p) {
             var name = p.value;
-            //console.log(typeof name);
             if (name.length < 6) {
-                document.getElementById("demo1").innerHTML = "Too short";
-                document.getElementById("demo1").style.color = "red";
-                document.getElementById("demo1").style.fontWeight = "bold";
+                document.getElementById("d1").innerHTML = "Too short";
+                document.getElementById("d1").style.color = "red";
+                document.getElementById("d1").style.fontWeight = "bold";
             }
         }
 
         function confirm() {
 
-            var x = document.getElementById("pass").value;
-            var y = document.getElementById("confirm").value;
+            var x = document.getElementById("p").value;
+            var y = document.getElementById("c").value;
             if (x != y) {
-                document.getElementById("demo2").innerHTML = "the two password doen't match";
-                document.getElementById("demo2").style.color = "red";
-                document.getElementById("demo2").style.fontWeight = "bold"
+                document.getElementById("d2").innerHTML = "the two password doen't match";
+                document.getElementById("d2").style.color = "red";
+                document.getElementById("d2").style.fontWeight = "bold"
             }
             else {
                 document.getElementById("button").style.display = "block";
