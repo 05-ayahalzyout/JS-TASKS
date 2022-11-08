@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label style="display:inline ; margin-right: 60px;">Password</label>
+    <input type="password" onchange="lessthan6(this)" id="pass">
+    <p id="demo1" style="display:inline ; "></p>
+    <br>
+    <br>
+    <label>Confirm Password</label>
+    <input type="password" onchange="confirm()" id="confirm">
+    <p id="demo2" style="display:inline ; "></p>
+    <button style="display:none ; " id="button">Submit</button>
+    <script>
+        function lessthan6(p) {
+            var name = p.value;
+            //console.log(typeof name);
+            if (name.length < 6) {
+                document.getElementById("demo1").innerHTML = "Too short";
+                document.getElementById("demo1").style.color = "red";
+                document.getElementById("demo1").style.fontWeight = "bold";
+            }
+        }
+
+        function confirm() {
+
+            var x = document.getElementById("pass").value;
+            var y = document.getElementById("confirm").value;
+            if (x != y) {
+                document.getElementById("demo2").innerHTML = "the two password doen't match";
+                document.getElementById("demo2").style.color = "red";
+                document.getElementById("demo2").style.fontWeight = "bold"
+            }
+            else {
+                document.getElementById("button").style.display = "block";
+
+
+
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="arab" onchange="flag()">
+        <option>Jordan</option>
+        <option>Lebanon</option>
+        <option>Palestine</option>
+        <option>Qatar</option>
+        <option>Syria</option>
+
+    </select>
+
+    <br>
+    <img src="jordaen.png" style="width: 400px;" id="pic">
+
+<script>
+function flag() {
+    var country = document.getElementById("arab").value;
+    if( country =="Jordan"){
+        document.getElementById("pic").src="jordaen.png";
+        
+    }
+    else if( country =="Lebanon"){
+        document.getElementById("pic").src="lebanun.png";
+        
+    }
+    else if( country =="Palestine"){
+        document.getElementById("pic").src="palasteen.png";
+        
+    }
+    else if( country =="Qatar"){
+        document.getElementById("pic").src="qatar.png";
+        
+    }
+    else document.getElementById("pic").src="syrea.png";
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

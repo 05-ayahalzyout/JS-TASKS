@@ -1,19 +1,20 @@
 var myArray= ["alex","mercer","madrasa","rashed2","emad","hala"]
 
-document.write((l(myArray)));
+// document.write((l(myArray)));
 
 
 
-function l(myArray){
+function shortname(x){
 
-for(let x=0 ; x<myArray.length-1;x++)
+for(let i=0 ; x<myArray.length-1;i++)
 
 {var y=myArray[0];
 
-if (myArray[x].length<=y.length)
+if (myArray[i].length<=y.length)
 {
-y=myArray[x];
+y=myArray[i];
 }
 }
 return y;
 }
+document.write(shortname(myArray));
